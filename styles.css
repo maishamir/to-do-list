@@ -1,0 +1,26 @@
+/* literally just a test class; it's ugly as hellll */
+.delete {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 5px;
+    color:white;
+    padding: 10px;
+    margin-left: 50px 
+}
+
+.delete:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.input-bar {
+    height: 25px
+}
+
+.taskName {
+    cursor: pointer;
+}
+
+.strike {
+    text-decoration: line-through;
+}
