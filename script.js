@@ -22,6 +22,7 @@ addTask.addEventListener('submit', function (e) {
 
     taskName.classList.add('taskName')
     deleteBtn.classList.add('delete')
+    deleteBtn.classList.add('right')
 
     // append to document
     li.appendChild(taskName)

@@ -1,11 +1,32 @@
 /* literally just a test class; it's ugly as hellll */
+
+.form {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.list {
+
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+#add-task {
+    width: 350px;
+    margin: 0 auto;
+}
 .delete {
     background-color: #4CAF50; /* Green */
-    border: none;
     border-radius: 5px;
     color:white;
     padding: 10px;
-    margin-left: 50px 
+    margin-right: 10px;
+    
 }
 
 .delete:hover {
@@ -14,7 +35,10 @@
 }
 
 .input-bar {
-    height: 25px
+    height: 20px;
+    width: 200px;
+    margin-bottom: 20px;
+
 }
 
 .taskName {
@@ -23,4 +47,27 @@
 
 .strike {
     text-decoration: line-through;
+}
+
+#task-list {
+    width: 50%;
+
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form {
+    border: 1px solid black;
+}
+
+.right {
+    
+    float: right;
 }
