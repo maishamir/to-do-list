@@ -12,39 +12,38 @@ addTask.addEventListener('submit', function (e) {
     const value = addTask.querySelector("input[type='text']").value;
 
     // create elements
-    const li = document.createElement('li')
-    const taskName = document.createElement('span')
+    const p = document.createElement('p')
     const deleteBtn = document.createElement('button')
 
     // add content
     deleteBtn.textContent = 'delete'
-    taskName.textContent = value;
+    p.innerHTML = `<input type="checkbox"> <p>${value}</p>`;
 
-    taskName.classList.add('taskName')
+
     deleteBtn.classList.add('delete')
     deleteBtn.classList.add('right')
+    p.classList.add('item')
 
     // append to document
-    li.appendChild(taskName)
-    li.appendChild(deleteBtn)
-    taskList.appendChild(li)
+    // p.append(deleteBtn)
+    taskList.appendChild(p)
     // console.log(deleteBtns);
 
     document.querySelector('.input-bar').value='';
 })
 
 // clear list
-const clearAll = document.getElementById('clear-all')
+// const clearAll = document.getElementById('clear-all')
 
-clearAll.addEventListener('click', function (e) {
-    e.preventDefault();
-    taskList.innerHTML = '';
-})
+// clearAll.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     taskList.innerHTML = '';
+// })
 
 // delete tasks from list
 taskList.addEventListener('click', function (e) {
    
-    if (e.target.className === 'delete') {
+    if (e.target.classList.contains('delete')) {
         const li = e.target.parentElement;
         
         li.parentNode.removeChild(li)
@@ -63,6 +62,25 @@ taskList.addEventListener('click', function (e) {
 
     }
 });
+
+// today's date
+let date = document.getElementById('date')
+const dayOfWeek = new Date().toLocaleString('en-us', { weekday: 'long' });
+
+// rest of the date
+const options = {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+}
+const restOfDate = new Date().toLocaleString('en-us', options)
+
+date.innerHTML = restOfDate;
+
+
+
+
+
 
 
 
